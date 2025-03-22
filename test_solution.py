@@ -13,13 +13,12 @@ class TestCheckValidString(unittest.TestCase):
         self.assertTrue(self.solution.checkValidString("(())"))
         self.assertTrue(self.solution.checkValidString("(***))"))
         self.assertTrue(self.solution.checkValidString("(********)"))
+        self.assertTrue(self.solution.checkValidString("(((***"))
 
     def test_invalid_cases(self):
         self.assertFalse(self.solution.checkValidString(")("))
         self.assertFalse(self.solution.checkValidString("((())"))
-        self.assertFalse(self.solution.checkValidString("(((***"))
         self.assertFalse(self.solution.checkValidString("(()))"))
-        self.assertFalse(self.solution.checkValidString("((*)"))
 
     def test_edge_cases(self):
         self.assertTrue(self.solution.checkValidString("(*)"))
